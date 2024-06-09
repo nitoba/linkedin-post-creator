@@ -10,7 +10,7 @@ pesquisa_tarefa = Task(
 )
 
 scraping_tarefa = Task(
-    description='Analisar perfis de influenciadores no LinkedIn para entender o estilo de escrita relacionado ao tema {topic}.',
+    description='Analisar o perfil do influendiador {profile_url} no LinkedIn para entender o estilo de escrita.',
     expected_output='Dados analisados dos perfis de influenciadores.',
     tools=[ScrapeWebsiteTool()],
     agent=scraper,

@@ -8,9 +8,9 @@ class DuckDuckGoTool(BaseTool):
     name: str = 'DuckDuckGo Search Tool'
     description: str = 'Tool to search the web using DuckDuckGo.'
 
-    def _run(self, topic: str) -> str:
+    def _run(self, query: str) -> str:
         search_url = 'https://duckduckgo.com/html/'
-        params = {'q': topic}
+        params = {'q': query}
         response = requests.post(search_url, data=params)
 
         if response.status_code != 200:
