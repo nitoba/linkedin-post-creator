@@ -6,8 +6,12 @@ class CreatePostUseCase:
         self.crew = crew
 
     def execute(self, topic: str) -> str:
-        return self.crew.kickoff(
+        response = self.crew.kickoff(
             inputs={
                 'topic': topic,
             }
         )
+
+        response
+
+        return response

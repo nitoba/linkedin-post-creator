@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from fastapi.responses import JSONResponse
 
 from src.domain.usecases.create_post import CreatePostUseCase
 from src.infra.ai.crew import crew
@@ -9,6 +10,7 @@ router = APIRouter(prefix='/posts', tags=['Posts'])
 
 @router.post(path='/')
 def handler(body: CreatePostRequest):
-    print(body.topic)
     usecase = CreatePostUseCase(crew)
-    return 'teste'
+    response = usecase.execute(body.topic)
+    print(response)
+    return JSONResponse({'data': response})

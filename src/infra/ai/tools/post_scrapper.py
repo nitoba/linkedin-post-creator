@@ -4,7 +4,7 @@ from crewai_tools import BaseTool
 
 
 class PostScrapperTool(BaseTool):
-    name: str = 'DuckDuckGo Scraper Tool'
+    name: str = 'Post Scraper Tool'
     description: str = (
         'Tool to scrape content from URLs provided by DuckDuckGo search results.'
     )
