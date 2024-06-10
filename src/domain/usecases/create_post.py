@@ -12,6 +12,4 @@ class CreatePostUseCase:
             }
         )
 
-        response
-
         return response
